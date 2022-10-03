@@ -5,12 +5,23 @@ function Imc() {
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
     const [resultado, setResultado] = useState();
+    const [print, setPrint] = useState("______");
 
     function handleRegister(e) {
+        var calcprint;
         e.preventDefault();
-
+        
         setResultado(peso/(altura*altura));
+
+        if (resultado < 18.5) {
+            calcprint = "Abaixo do peso";
+        }
+        if (resultado > 18.5) {
+            calcprint = "Normal";
+        }
+
     } 
+
 
     
 
@@ -30,7 +41,8 @@ function Imc() {
             <input type='submit'/>
         </form>
 
-        <p>Resultado: {resultado}, {print}</p>
+        <p>Resultado: {resultado}</p>
+        <p>Você está {print}</p>
         </>
 
 
