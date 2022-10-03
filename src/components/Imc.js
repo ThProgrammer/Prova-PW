@@ -4,7 +4,6 @@ function Imc() {
 
     const [resultado, setResultado] = useState();
     const [imc, setImc] = useState();
-    
 
     function calcimc (e) {
         e.preventDefault();
@@ -25,6 +24,7 @@ function Imc() {
     } 
 
     return (
+
         <>
             <form onSubmit={calcimc}>
                 <label>IMC: </label>
