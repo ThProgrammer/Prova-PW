@@ -14,8 +14,8 @@ function compra() {
     if (estoque[itemid] >= produtoquant){
         valor = preco[itemid]*produtoquant
         resultado.innerHTML = `<h3> Produto Selecionado ${itemtxt}<br>
-        Valor do produto: ${preco[itemid]}<br>
-        Valor da compra: ${valor}<h3>`
+        Valor do produto: ${preco[itemid].toLocaleString("pt-BR", { style: "currency", currency: "BRL"})}<br>
+        Valor da compra: ${valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL"})}<h3>`
     }
 
     else {
