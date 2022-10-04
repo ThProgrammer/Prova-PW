@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffdc68;
+    height: 3.5em;
+    align-items: center;
+}
+
+#logo {
+    line-height: 0;
+    color: #352504;
+    margin: 20px;
+}
+
+#logo:hover {
+    color: #cc982a;
+}
+
+nav {
+    display: flex;
+    gap: 0.8em;
+    margin: 20px;
+    line-height: 0;
+}
+
+nav a {
+    color: #352504;
+}
+
+nav a:hover {
+    color: #cc982a;
+}
