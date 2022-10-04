@@ -9,8 +9,9 @@ header {
 
 #principal {
     margin: 0px auto;
-    border: 1px solid blue;
-    width: 50%;
+    border: 1px solid black;
+    width: 35%;
+    height: 150px;
 }
 
 #principal input {
