@@ -11,11 +11,13 @@ function compra() {
 
     var resultado = document.querySelector("div#resultado")
 
+    resultado.innerHTML = `Estoque: ${estoque[itemid]}<br>`
+
     if (estoque[itemid] >= produtoquant){
         valor = preco[itemid]*produtoquant
-        resultado.innerHTML = `<h3> Produto Selecionado ${itemtxt}<br>
+        resultado.innerHTML += ` Produto Selecionado: ${itemtxt}<br>
         Valor do produto: ${preco[itemid].toLocaleString("pt-BR", { style: "currency", currency: "BRL"})}<br>
-        Valor da compra: ${valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL"})}<h3>`
+        Valor da compra: ${valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL"})}`
     }
 
     else {

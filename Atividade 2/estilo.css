@@ -17,3 +17,9 @@ header {
 #principal input {
     margin-top: 25px;
 }
+
+#resultado {
+    text-align: left;
+    margin-top: 8px;
+    margin-left: 12px;
+}
