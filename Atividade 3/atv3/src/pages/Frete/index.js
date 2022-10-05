@@ -7,7 +7,11 @@ function Frete() {
     const [peso, setPeso] = useState(0);
     const [destino, setDestino] = useState("");
     const [frete, setFrete] = useState(0);
-    const [km, setKm] = useState(0);
+    const [dados, setDados] = useState({
+        cidade: "",
+        distancia: 0,
+        peso: 0,
+    })
     const lista = [{
         cidade: "Osasco",
         distancia: 22,
@@ -26,7 +30,8 @@ function Frete() {
     function calcularFrete(e) {
         e.preventDefault();
         obterDistancia();
-        setFrete((peso * valorTonelada) * km);
+        setFrete("fueda");
+        
     }
 
     function obterDistancia() {
@@ -35,8 +40,12 @@ function Frete() {
 
     function loopLista(element) {
         if (element.cidade === destino) {
-            setKm(element.distancia);
-        };
+            setDados({
+                cidade: element.cidade,
+                distancia: element.distancia,
+                peso: peso,
+            })
+        }
     }
 
     {/*Página */}
@@ -58,12 +67,13 @@ function Frete() {
             </form>
 
             <div className='resultante'>
-                <h2>Destino: {destino}</h2>
-                <h2>Peso: {peso}</h2>
+                <h2>Destino: {dados.cidade}</h2>
+                <h2>Peso: {dados.peso}</h2>
                 <h2>Valor do Frete: {frete}</h2>
             </div>
         </>
     )
+           
 }
 
-export default Frete;
+export default Frete
