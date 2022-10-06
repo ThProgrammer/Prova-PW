@@ -10,7 +10,7 @@ function Header () {
             <nav>
                 <Link to='/home'>Home</Link>
                 <Link to='/frete'>Frete</Link>
-                <Link to='cadastro'>Cadastro</Link>
+                <Link to='/cadastro'>Cadastro</Link>
                 <Link to='/sobre'>Sobre Nós</Link>
             </nav>
         </header>

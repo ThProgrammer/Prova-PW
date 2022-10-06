@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Frete from './pages/Frete';
+import Sobre from './pages/Sobre';
+import Cadastro from './pages/Cadastro';
 
 function App() {
   return (
@@ -12,9 +14,8 @@ function App() {
           <Route path='/home' element={<Home/>} />
           <Route path='/' element={<Login/>} />
           <Route path='/frete' element={<Frete/>} />
-          {/* 
-              <Route path='cadastro' element={<Cadastro/> />
-              <Route path='sobre' element={<Sobre/>}/>*/}
+          <Route path='/sobre' element={<Sobre/>} />
+          <Route path='/cadastro' element={<Cadastro/>} />
         </Routes>
       </BrowserRouter>
     </>
