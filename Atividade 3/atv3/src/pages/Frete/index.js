@@ -27,10 +27,13 @@ function Frete() {
     }];
 
     {/*Funções Auxiliares */}
+    
     function calcularFrete(e) {
         e.preventDefault();
         obterDistancia();
-        setFrete("fueda");
+        setFrete((valorTonelada * peso) * dados.distancia);
+    {/**Professor, no pdf você colocou que o calculo seria (valorTonelada * km), mas aqui fiz (valorTonelada * peso)* km
+        porque quis levar todos os inputs em consideração :)  */}
         
     }
 
@@ -63,7 +66,7 @@ function Frete() {
                     setDestino(e.target.value);
                 }}/>
 
-                <button type='submit'>Calcular</button>
+                <button type='submit' title='Clique duas vezes para receber o Frete'>Calcular</button>
             </form>
 
             <div className='resultante'>
