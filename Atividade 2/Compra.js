@@ -22,6 +22,5 @@ function compra() {
 
     else {
         window.alert("Estoque Insuficiente!")
-        compra = false;
     }
 }
