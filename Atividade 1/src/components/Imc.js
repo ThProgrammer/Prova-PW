@@ -17,7 +17,7 @@ function Imc() {
         } else if (imc > 29.9 && imc < 34.9) {
             setResultado("Obesidade Grau I");
         } else  if (imc > 34.9 && imc < 39.9) {
-            setResultado("Obesidade Grau II")
+            setResultado("Obesidade Grau II");
         } else {
             setResultado("Obesidade Mórbida");
         }
